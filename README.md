@@ -11,7 +11,7 @@ Configuration files to check over:
 # This config file is tagged to have the env variables injected.
 /app/env.config.toml
 
-NOTE: The env.config.toml need set like: 
+NOTE: The env.config.toml should be set like: 
 
 bigapp.init_app(main, "env.config.toml") 
 
