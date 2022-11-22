@@ -1,0 +1,10 @@
+enabled = "yes"
+url_prefix = "/default_theme_example"
+
+#[settings]
+#url_prefix = "/"
+#template_folder = "templates"
+#static_folder = "static"
+#
+#[session]
+#example = "example"
