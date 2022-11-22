@@ -1,3 +1,5 @@
+![](https://github.com/CheeseCake87/Flask-BigApp-Structures/blob/master/app/blueprints/www/static/Flask-BigApp-SVG.svg)  
+
 # Flask-BigApp Structures (themes)
 ### This is a collection of structures for Flask-BigApp
 It includes pre-setup configs and a server module that can handle docker-compose deployments.
