@@ -2,7 +2,6 @@
 
 # Flask-BigApp Structures (themes)
 ### This is a collection of structures for Flask-BigApp
-It includes pre-setup configs and a server module that can handle docker-compose deployments.
 
 Configuration files to check over:
 ```text
