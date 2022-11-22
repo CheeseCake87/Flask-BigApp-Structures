@@ -8,7 +8,7 @@ db = SQLAlchemy()
 
 def create_app():
     main = Flask(__name__)
-    bigapp.init_app(main, "env.config.toml")
+    bigapp.init_app(main)
     db.init_app(main)
     bigapp.import_structures("structures")
     bigapp.import_models(folder="models")
