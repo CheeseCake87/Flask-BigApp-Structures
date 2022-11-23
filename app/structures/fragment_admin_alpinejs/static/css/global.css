@@ -1,0 +1,58 @@
+/* Global CSS */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.top_nav {
+    width: 100%;
+    height: 60px;
+    background-color: #1c1c1c;
+}
+
+.container {
+    margin: 2rem;
+}
+
+.card-small {
+    width: 300px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fdfdfd;
+}
+
+.card-header p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-body {
+    font-size: 1.0rem;
+    padding: 0.5rem;
+}
+
+
+.card-footer {
+    flex-grow: 1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0 0 10px 10px;
+    padding: 0.5rem;
+    border-top: 1px solid #eaeaea;
+    background-color: #fdfdfd;
+}
+
+.card-footer p {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block _title %}{# Populate this in blueprint template #}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('fragment_admin_alpinejs.static', filename='css/global.css') }}">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/alpinejs_fragmentor.js') }}"></script>
+    <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/sop.js') }}"></script>
+    {% block _head %}{# Populate this in blueprint template #}{% endblock %}
+</head>
+
+<body>
+
+{% block top_nav %}
+    {% include 'fragment_admin_alpinejs/includes/top_nav.html' %}
+{% endblock %}
+
+{% block global_container %}
+
+    {% block above_container %}
+        {# Populate this in blueprint template #}
+    {% endblock %}
+
+    <div class="container">
+        {% block container %}
+            {# Populate this in blueprint template #}
+        {% endblock %}
+    </div>
+
+    {% block below_container %}
+        {# Populate this in blueprint template #}
+    {% endblock %}
+
+{% endblock %}
+
+{% block _eop %}{# Populate this in blueprint template #}{% endblock %} {# End of Page Block #}
+<script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/eop.js') }}"></script>
+</body>
+</html>

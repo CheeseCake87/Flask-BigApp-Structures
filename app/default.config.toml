@@ -12,8 +12,9 @@ session_time = 480
 error_404_help = true
 SQLALCHEMY_TRACK_MODIFICATIONS = false
 EXPLAIN_TEMPLATE_LOADING = false
-static_folder = "flask/_static"
-template_folder = "flask/_templates"
+#static_folder = "flask/_static"
+#template_folder = "flask/_templates"
+DEFAULT_STRUCTURE = "default_theme"
 
 # [database.main] is loaded as SQLALCHEMY_DATABASE_URI
 # type = mysql / postgresql / sqlite

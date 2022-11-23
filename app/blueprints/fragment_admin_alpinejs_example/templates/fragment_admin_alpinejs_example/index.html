@@ -1,0 +1,17 @@
+{% extends extend %}
+{% set client_card_url = url_for(bp_name + '.client_card') %}
+
+{% block container %}
+
+    <div x-data>
+
+        <div x-init="$store.fragmentor.get('{{ client_card_url }}', $el)">
+            {# Shows default animated loader svg. #}
+            <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="Loading...">
+            {# This will be replaced once fragmentor has returned the response. #}
+        </div>
+
+    </div>
+
+    <p>Test</p>
+{% endblock %}

@@ -5,6 +5,11 @@ from flask_sqlalchemy import SQLAlchemy
 bigapp = BigApp()
 db = SQLAlchemy()
 
+listed_structures = [
+    ("default_theme", "default_theme_example.index"),
+    ("fragment_admin_alpinejs", "fragment_admin_alpinejs_example.index")
+]
+
 
 def create_app():
     main = Flask(__name__)
