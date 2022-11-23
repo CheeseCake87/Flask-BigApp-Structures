@@ -8,6 +8,7 @@
         {% block _title %}{# Populate this in blueprint template #}{% endblock %}
     </title>
     <link rel="stylesheet" href="{{ url_for('fragment_admin_alpinejs.static', filename='css/global.css') }}">
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/alpinejs_fragmentor.js') }}"></script>
     <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/sop.js') }}"></script>

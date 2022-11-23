@@ -2,9 +2,21 @@
 {% set client_card_url = url_for(bp_name + '.client_card') %}
 
 {% block container %}
-    <div x-data>
+    <div x-data style="width: 100%;">
 
-        <div x-init="$store.fragmentor.get('{{ client_card_url }}', $el)">
+        <div style="display: flex; justify-content: center; padding: 20px;" x-init="$store.fragmentor.get('{{ client_card_url }}', $el)">
+            {# Shows default animated loader svg. #}
+            <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="Loading...">
+            {# This will be replaced once fragmentor has returned the response. #}
+        </div>
+
+        <div style="height: 2000px; width: 100%; margin: 10px; border: 1px solid black; text-align: center">
+            <p>This is a blank box used to test AlpineJS intersect.
+                When the Client card below comes into view, it should send a get request to the client_card endpoint.</p>
+        </div>
+
+        {# Using Alpine intersect, the following will only load when it comes into the viewport #}
+        <div style="display: flex; justify-content: center; padding: 20px; margin-bottom: 100px;" x-intersect="$store.fragmentor.get('{{ client_card_url }}', $el)">
             {# Shows default animated loader svg. #}
             <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="Loading...">
             {# This will be replaced once fragmentor has returned the response. #}

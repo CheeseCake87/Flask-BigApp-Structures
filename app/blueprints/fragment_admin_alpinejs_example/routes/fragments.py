@@ -7,7 +7,7 @@ from .. import bp
 
 @bp.route("/fragment/client_card", methods=["GET"])
 def client_card():
-    sleep(5)
+    sleep(2)
     return render_template(bp.tmpl("fragments/client_card.html"))
 
 
