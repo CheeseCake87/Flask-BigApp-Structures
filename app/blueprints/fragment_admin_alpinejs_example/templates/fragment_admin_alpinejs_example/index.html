@@ -1,12 +1,12 @@
 {% extends extend %}
 {% set client_card_url = url_for(bp_name + '.client_card') %}
+{% set blogs_url = url_for(bp_name + '.blogs') %}
 
 {% block container %}
-    <div x-data style="width: 100%;">
-
+    <div x-data style="width: 100%; padding-bottom: 50px;">
         <div style="display: flex; justify-content: center; padding: 20px;" x-init="$store.fragmentor.get('{{ client_card_url }}', $el)">
             {# Shows default animated loader svg. #}
-            <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="Loading...">
+            <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="loading...">
             {# This will be replaced once fragmentor has returned the response. #}
         </div>
 
@@ -16,9 +16,9 @@
         </div>
 
         {# Using Alpine intersect, the following will only load when it comes into the viewport #}
-        <div style="display: flex; justify-content: center; padding: 20px; margin-bottom: 100px;" x-intersect="$store.fragmentor.get('{{ client_card_url }}', $el)">
+        <div style="display: flex; justify-content: center; padding: 20px;" x-transition x-intersect.half="$store.fragmentor.get('{{ blogs_url }}', $el, 500)">
             {# Shows default animated loader svg. #}
-            <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="Loading...">
+            <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="loading...">
             {# This will be replaced once fragmentor has returned the response. #}
         </div>
 
