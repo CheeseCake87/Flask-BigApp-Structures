@@ -3,6 +3,9 @@
 {% set blogs_url = url_for(bp_name + '.blogs') %}
 
 {% block container %}
+
+    {# The fragmentor works like $store.fragmentor.get(endpoint_to_fetch_jinja, current_element, time_delay) #}
+
     <div x-data style="width: 100%; padding-bottom: 50px;">
         <div style="display: flex; justify-content: center; padding: 20px;" x-init="$store.fragmentor.get('{{ client_card_url }}', $el)">
             {# Shows default animated loader svg. #}
@@ -16,12 +19,11 @@
         </div>
 
         {# Using Alpine intersect, the following will only load when it comes into the viewport #}
-        <div style="display: flex; justify-content: center; padding: 20px;" x-transition x-intersect.half="$store.fragmentor.get('{{ blogs_url }}', $el, 500)">
+        {# This is also an example of the time delay built into the fragmentor #}
+        <div style="display: flex; justify-content: center; padding: 20px;" x-transition x-intersect.once="$store.fragmentor.get('{{ blogs_url }}', $el, 500)">
             {# Shows default animated loader svg. #}
             <img src="{{ url_for('fragment_admin_alpinejs.static', filename='img/puff.svg') }}" alt="loading...">
             {# This will be replaced once fragmentor has returned the response. #}
         </div>
-
     </div>
-    <p>Test</p>
 {% endblock %}

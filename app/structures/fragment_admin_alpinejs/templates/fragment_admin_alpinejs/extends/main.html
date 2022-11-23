@@ -16,7 +16,6 @@
     <!-- Alpine Core -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-
     <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/sop.js') }}"></script>
     {% block _head %}{# Populate this in blueprint template #}{% endblock %}
 </head>
@@ -47,5 +46,6 @@
 
 {% block _eop %}{# Populate this in blueprint template #}{% endblock %} {# End of Page Block #}
 <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/eop.js') }}"></script>
+
 </body>
 </html>
