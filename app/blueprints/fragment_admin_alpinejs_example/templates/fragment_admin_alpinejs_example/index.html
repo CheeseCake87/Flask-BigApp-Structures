@@ -2,7 +2,6 @@
 {% set client_card_url = url_for(bp_name + '.client_card') %}
 
 {% block container %}
-
     <div x-data>
 
         <div x-init="$store.fragmentor.get('{{ client_card_url }}', $el)">
@@ -12,6 +11,5 @@
         </div>
 
     </div>
-
     <p>Test</p>
 {% endblock %}
