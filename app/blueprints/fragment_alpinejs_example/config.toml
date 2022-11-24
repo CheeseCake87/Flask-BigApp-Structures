@@ -1,11 +1,11 @@
 enabled = "yes"
 
 [settings]
-url_prefix = "/default_admin_alpinejs_example"
+url_prefix = "/fragment_alpinejs_example"
 template_folder = "templates"
 static_folder = "static"
-#static_url_path = "/default_admin_alpinejs_example/static"
+#static_url_path = "/fragment_alpinejs_example/static"
 
 [session]
-default_admin_alpinejs_example_session = "yes"
+fragment_alpinejs_example = "yes"
 

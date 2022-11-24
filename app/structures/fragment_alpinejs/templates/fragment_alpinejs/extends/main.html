@@ -9,16 +9,15 @@
     <title>
         {% block _title %}{# Populate this in blueprint template #}{% endblock %}
     </title>
-    <link rel="stylesheet" href="{{ url_for('fragment_admin_alpinejs.static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('fragment_alpinejs.static', filename='css/global.css') }}">
 
-    <!-- Alpine Locals -->
-    <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/alpinejs_fragmentor.js') }}"></script>
     <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@uilix/fragmentor@0.0.4/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <!-- Alpine Core -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/sop.js') }}"></script>
+    <script src="{{ url_for('fragment_alpinejs.static', filename='js/sop.js') }}"></script>
     {% block _head %}{# Populate this in blueprint template #}{% endblock %}
 
 </head>
@@ -26,7 +25,7 @@
 <body>
 
 {% block top_nav %}
-    {% include 'fragment_admin_alpinejs/includes/top_nav.html' %}
+    {% include 'fragment_alpinejs/includes/top_nav.html' %}
 {% endblock %}
 
 {% block global_container %}
@@ -48,7 +47,7 @@
 {% endblock %}
 
 {% block _eop %}{# End of Page Block #}{# Populate this in blueprint template #}{% endblock %}
-<script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/eop.js') }}"></script>
+<script src="{{ url_for('fragment_alpinejs.static', filename='js/eop.js') }}"></script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@ bp = Blueprint(__name__)
 
 page_needs = {
     "bp_name": bp.name,
-    "extend": "fragment_admin_alpinejs/extends/main.html",
+    "extend": f"fragment_alpinejs/extends/main.html",
 }
 
 bp.import_routes("routes")

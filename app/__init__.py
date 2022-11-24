@@ -7,7 +7,7 @@ db = SQLAlchemy()
 
 listed_structures = [
     ("default_theme", "default_theme_example.index"),
-    ("fragment_admin_alpinejs", "fragment_admin_alpinejs_example.index")
+    ("fragment_alpinejs", "fragment_alpinejs_example.index")
 ]
 
 
