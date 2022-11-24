@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        {% block _title %}{# Populate this in blueprint template #}{% endblock %}
+    </title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{ url_for('pikas_admin.static', filename='css/global.css') }}">
+    <!-- Bootstrap CSS Only -->
+    <link rel="stylesheet" href="{{ url_for('pikas_admin.static', filename='css/bootstrap/bootstrap.min.css') }}">
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@uilix/fragmentor@0.0.4/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="{{ url_for('pikas_admin.static', filename='js/sop.js') }}"></script>
+    {% block _head %}{# Populate this in blueprint template #}{% endblock %}
+
+</head>
+
+<body>
+{% block replace_body %}
+
+    <div style="width: 100%;" class="p-1">
+        <p><a href="{{ url_for('pikas_admin_example.login') }}">Login Page</a></p>
+    </div>
+
+    {% block top_nav %}
+        {% include 'pikas_admin/includes/top_nav.html' %}
+    {% endblock %}
+
+    {% block replace_container %}
+        <div class="container">
+            {% block container %}
+
+                {# Populate this in blueprint template #}
+
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+{% endblock %}
+{% block _eop %}{# End of Page Block #}{# Populate this in blueprint template #}{% endblock %}
+<script src="{{ url_for('pikas_admin.static', filename='js/eop.js') }}"></script>
+
+</body>
+</html>

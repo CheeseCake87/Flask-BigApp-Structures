@@ -7,7 +7,8 @@ db = SQLAlchemy()
 
 listed_structures = [
     ("default_theme", "default_theme_example.index"),
-    ("fragment_alpinejs", "fragment_alpinejs_example.index")
+    ("fragment_alpinejs", "fragment_alpinejs_example.index"),
+    ("pikas_admin", "pikas_admin_example.index")
 ]
 
 
@@ -19,5 +20,6 @@ def create_app():
     bigapp.import_models(folder="models")
     bigapp.import_builtins("flask/routes")
     bigapp.import_builtins("flask/template_filters")
+    bigapp.import_blueprints("root")
     bigapp.import_blueprints("blueprints")
     return main
