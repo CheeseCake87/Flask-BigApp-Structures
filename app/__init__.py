@@ -20,7 +20,4 @@ def create_app():
     bigapp.import_builtins("flask/routes")
     bigapp.import_builtins("flask/template_filters")
     bigapp.import_blueprints("blueprints")
-    print(main.config['APP_NAME'], ", <- this value was pulled from main.config['APP_NAME']")
-    print("Which was set in the .env file. It was then tagged in the env.config.toml file.")
-    print("Navigate to app/__init__.py file to find this print statement.")
     return main

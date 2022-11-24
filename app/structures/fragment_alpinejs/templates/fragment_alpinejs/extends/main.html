@@ -2,8 +2,10 @@
 
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>
         {% block _title %}{# Populate this in blueprint template #}{% endblock %}
     </title>
@@ -18,6 +20,7 @@
 
     <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/sop.js') }}"></script>
     {% block _head %}{# Populate this in blueprint template #}{% endblock %}
+
 </head>
 
 <body>
@@ -44,7 +47,7 @@
 
 {% endblock %}
 
-{% block _eop %}{# Populate this in blueprint template #}{% endblock %} {# End of Page Block #}
+{% block _eop %}{# End of Page Block #}{# Populate this in blueprint template #}{% endblock %}
 <script src="{{ url_for('fragment_admin_alpinejs.static', filename='js/eop.js') }}"></script>
 
 </body>
