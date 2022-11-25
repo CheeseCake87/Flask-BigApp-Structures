@@ -1,21 +1,20 @@
 {% extends extend %}
-{% set client_card_url = url_for(bp_name + '.client_card') %}
-{% set blogs_url = url_for(bp_name + '.blogs') %}
+{% set test_fragment_url = url_for(bp_name + '.fragment_test') %}
 
 {% block container %}
 
     {# The fragmentor works like $store.fragmentor.get(endpoint_to_fetch_jinja, current_element, time_delay) #}
 
     <div x-data style="width: 100%; padding-bottom: 50px;">
-        <div style="display: flex; justify-content: center; padding: 20px;" x-init="$fragmentor('{{ client_card_url }}')">
-            <img src="{{ url_for('fragment_alpinejs.static', filename='img/puff.svg') }}" alt="loading...">
+        <div style="display: flex; justify-content: center; padding: 20px;" x-fragmentor:get="{{ test_fragment_url }}">
+            <img src="{{ url_for('pika.static', filename='img/puff.svg') }}" alt="loading...">
         </div>
 
         <p style="text-align: center">Below is sending a get request to /fragment/client_card .
             This route has a sleep delay, the loading graphic is what is being replaced once the response has returned 200.</p>
 
-        <div style="display: flex; justify-content: center; padding: 20px;" x-fragmentor:get.delay.500ms="{{ client_card_url }}">
-            <img src="{{ url_for('fragment_alpinejs.static', filename='img/puff.svg') }}" alt="loading...">
+        <div style="display: flex; justify-content: center; padding: 20px;" x-fragmentor:get.delay.500ms="{{ test_fragment_url }}">
+            <img src="{{ url_for('pika.static', filename='img/puff.svg') }}" alt="loading...">
         </div>
 
         <div style="height: 2000px; width: 100%; margin: 10px; border: 1px solid black; text-align: center">
@@ -31,8 +30,8 @@
         <p style="text-align: center">Using Alpine intersect, the following will only load when it comes into the viewport
             This is also an example of the time delay built into the fragmentor</p>
 
-        <div style="display: flex; justify-content: center; padding: 20px;" x-intersect="$fragmentor('{{ blogs_url }}')">
-            <img src="{{ url_for('fragment_alpinejs.static', filename='img/puff.svg') }}" alt="loading...">
+        <div style="display: flex; justify-content: center; padding: 20px;" x-intersect="$fragmentor('{{ test_fragment_url }}')">
+            <img src="{{ url_for('pika.static', filename='img/puff.svg') }}" alt="loading...">
         </div>
     </div>
 

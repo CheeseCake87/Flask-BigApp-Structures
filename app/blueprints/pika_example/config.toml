@@ -1,0 +1,9 @@
+enabled = "yes"
+
+[settings]
+url_prefix = "/pika_example"
+template_folder = "templates"
+static_folder = "static"
+#static_url_path = "/pika_example/static"
+
+[session]

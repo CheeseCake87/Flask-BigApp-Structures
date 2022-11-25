@@ -1,0 +1,21 @@
+/* Global CSS */
+
+[x-cloak] {
+    display: none !important;
+}
+
+.bg-lessdark {
+    background-color: #1a1a1a;
+}
+
+.bg-moredark {
+    background-color: #0d0d0d;
+}
+
+.bg-lesslight {
+    background-color: #ececec;
+}
+
+.text-notsolight {
+    color: #bfbfbf;
+}

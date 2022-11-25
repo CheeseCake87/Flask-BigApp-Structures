@@ -8,7 +8,7 @@ db = SQLAlchemy()
 listed_structures = [
     ("default_theme", "default_theme_example.index"),
     ("fragment_alpinejs", "fragment_alpinejs_example.index"),
-    ("pikas_admin", "pikas_admin_example.index")
+    ("pika", "pika_example.index")
 ]
 
 
@@ -22,4 +22,13 @@ def create_app():
     bigapp.import_builtins("flask/template_filters")
     bigapp.import_blueprints("root")
     bigapp.import_blueprints("blueprints")
+
+    @main.before_request
+    def before_request():
+        pass
+
+    @main.after_request
+    def after_request(response):
+        return response
+
     return main
