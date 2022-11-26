@@ -1,8 +1,21 @@
 {% extends extend %}
 
-{% block above_container %}{# MENU DISABLED #}{% endblock %}
+{% block top_nav %}{# MENU DISABLED #}{% endblock %}
 
-{% block replace_container %}
-    {{ login_form.username }}
-    {{ login_form.password }}
+{% block body %}
+    <div x-data x-init="$refs.body.className = 'bg-dothingsgrey'" class="d-flex justify-content-center">
+
+        <div class="login-card">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Username</span>
+                {{ login_form.username }}
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Password</span>
+                {{ login_form.password }}
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

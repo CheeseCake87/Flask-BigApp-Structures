@@ -8,6 +8,7 @@ page_needs = {
 }
 
 bp.import_routes("routes")
+bp.import_nested_blueprint("fragments")
 
 
 @bp.before_app_request
@@ -18,4 +19,3 @@ def before_app_request():
 @bp.after_app_request
 def after_app_request(response):
     return response
-

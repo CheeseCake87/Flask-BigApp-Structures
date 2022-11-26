@@ -1,0 +1,15 @@
+.login-card {
+    background-color: #eeeeee;
+    margin: 25px;
+    padding: 25px;
+    width: 600px;
+}
+
+/* if media screen falls below 800px */
+@media (max-width: 800px) {
+    .login-card {
+        width: 100%;
+        margin: 5px;
+
+    }
+}

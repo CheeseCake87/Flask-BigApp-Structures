@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-        {% block _title %}{# Populate this in blueprint template #}{% endblock %}
+        {% block title %}{# Populate this in blueprint template #}{% endblock %}
     </title>
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="{{ url_for('pika.static', filename='css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('pika.static', filename='css/elements.css') }}">
     <!-- Bootstrap CSS Only -->
     <link rel="stylesheet" href="{{ url_for('pika.static', filename='css/bootstrap/bootstrap.min.css') }}">
 
@@ -27,25 +28,23 @@
     <!-- JS Local -->
     <script defer src="{{ url_for('pika.static', filename='js/sop.js') }}"></script>
 
-    {% block _head %}{# Populate this in blueprint template #}{% endblock %}
+    {% block head %}{# Populate this in blueprint template #}{% endblock %}
 
 </head>
 
-<body>
-<div x-data class="w-100 h-100" x-bind:class="$store.darkMode.on ? 'bg-lessdark text-notsolight' : 'bg-body'">
-
-    {% block replace_body %}
-
-        <div style="width: 100%; border-bottom: 1px solid white" class="p-1 bg-dark">
-            <a class="text-light" href="{{ url_for('pika_example.login') }}">Login Page</a>
-        </div>
+<body x-data x-bind:class="$store.darkMode.on ? 'bg-lessdark text-notsolight' : 'bg-body'" x-ref="body">
+<div style="width: 100%; border-bottom: 1px solid white; z-index: 999;" class="p-1 bg-dark">
+    <a class="text-light" href="{{ url_for('pika_example.login') }}">Login Page</a>
+</div>
+{% block body %}
+    <div>
 
         {% block top_nav %}
             {% include 'pika/includes/top_nav.html' %}
         {% endblock %}
 
         {% block replace_container %}
-            <div class="container">
+            <div class="container-fluid">
                 {% block container %}
 
                     {# Populate this in blueprint template #}
@@ -54,10 +53,8 @@
             </div>
         {% endblock %}
 
-    {% endblock %}
-
-</div>
-
+    </div>
+{% endblock %}
 {% block _eop %}{# End of Page Block #}{# Populate this in blueprint template #}{% endblock %}
 <script src="{{ url_for('pika.static', filename='js/eop.js') }}"></script>
 
