@@ -1,8 +1,31 @@
+.navbar-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-item-dark {
+    padding: 0 20px;
+}
+
+.navbar-item-dark:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-item-light {
+    padding: 0 20px;
+}
+
+.navbar-item-light:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
 .login-card {
     background-color: #eeeeee;
     margin: 25px;
     padding: 25px;
-    width: 600px;
+    width: 400px;
 }
 
 /* if media screen falls below 800px */

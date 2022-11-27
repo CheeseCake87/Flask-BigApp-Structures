@@ -34,7 +34,8 @@
 
 <body x-data x-bind:class="$store.darkMode.on ? 'bg-lessdark text-notsolight' : 'bg-body'" x-ref="body">
 <div style="width: 100%; border-bottom: 1px solid white; z-index: 999;" class="p-1 bg-dark">
-    <a class="text-light" href="{{ url_for('pika_example.login') }}">Login Page</a>
+    <a class="text-light" href="{{ url_for('pika_example.login') }}">Login Page</a> -
+    <a class="text-light" href="{{ url_for('pika_example.index') }}">Index Page</a>
 </div>
 {% block body %}
     <div>

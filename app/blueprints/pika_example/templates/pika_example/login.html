@@ -6,15 +6,12 @@
     <div x-data x-init="$refs.body.className = 'bg-dothingsgrey'" class="d-flex justify-content-center">
 
         <div class="login-card">
-            <div class="input-group mb-3">
-                <span class="input-group-text">Username</span>
+            <h2 class="mb-4">Login</h2>
+            <form method="get" action="{{ url_for('pika_example.index') }}">
                 {{ login_form.username }}
-            </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text">Password</span>
                 {{ login_form.password }}
-            </div>
+                {{ login_form.submit }}
+            </form>
         </div>
 
     </div>

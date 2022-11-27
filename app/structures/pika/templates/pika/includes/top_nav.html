@@ -2,13 +2,20 @@
      x-bind:class="$store.darkMode.on ? 'bg-moredark text-light' : 'bg-lesslight'">
     <div class="container-fluid">
 
-        <div>
+
+        <div class="navbar-group">
+
             <a class="navbar-brand" href="#">
                 <!-- Frédéric Dulude-de Broin - Own work -->
                 <img style="height: 50px" src="{{ url_for('pika.static', filename='img/pika.jpg') }}"
                      class="rounded-circle float-start" alt="Pika"
                      title="Picture of a Pika by Frédéric Dulude-de Broin">
             </a>
+
+            <div class="navbar-item-light">
+                <span>Login</span>
+            </div>
+
         </div>
 
         <div class="d-flex justify-content-between">

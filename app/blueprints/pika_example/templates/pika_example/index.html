@@ -1,7 +1,11 @@
 {% extends extend %}
-{% set test_fragment_url = url_for(bp_name + '.fragments.index') %}
 
 {% block container %}
 
+    <div x-init="$fragmentor('{{ url_for("pika_example.fragments.entry") }}')" x-ref="entry">
+
+        <p>fragment test</p>
+
+    </div>
 
 {% endblock %}

@@ -11,7 +11,7 @@
 }
 
 .clickable-light:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.05);
     color: black;
 }
 
@@ -31,15 +31,15 @@
 }
 
 .bg-moredark {
-    background-color: #0d0d0d;
+    background-color: #0d0d0d!important;
 }
 
 .bg-dothingsgrey {
-    background-color: #444444;
+    background-color: #444444!important;
 }
 
 .bg-lesslight {
-    background-color: #ececec;
+    background-color: #ececec!important;
 }
 
 .text-notsolight {
