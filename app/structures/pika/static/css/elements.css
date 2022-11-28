@@ -5,16 +5,13 @@
     height: 100%;
 }
 
-.navbar-item-dark {
-    padding: 0 20px;
+.navbar-item {
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .navbar-item-dark:hover {
     background-color: rgba(255, 255, 255, 0.05);
-}
-
-.navbar-item-light {
-    padding: 0 20px;
 }
 
 .navbar-item-light:hover {

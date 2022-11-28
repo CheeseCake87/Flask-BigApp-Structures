@@ -2,7 +2,6 @@
      x-bind:class="$store.darkMode.on ? 'bg-moredark text-light' : 'bg-lesslight'">
     <div class="container-fluid">
 
-
         <div class="navbar-group">
 
             <a class="navbar-brand" href="#">
@@ -12,8 +11,12 @@
                      title="Picture of a Pika by Frédéric Dulude-de Broin">
             </a>
 
-            <div class="navbar-item-light">
-                <span>Login</span>
+            <div class="navbar-item navbar-item-light" @click="$fragmentor('{{ url_for("pika_example.fragments.entry") }}', $refs.entry)">
+                <span>Entry</span>
+            </div>
+
+            <div class="navbar-item navbar-item-light" @click="$fragmentor('{{ url_for("pika_example.fragments.other") }}', $refs.entry)">
+                <span>Other</span>
             </div>
 
         </div>
